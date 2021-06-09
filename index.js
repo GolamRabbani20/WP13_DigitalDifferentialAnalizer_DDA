@@ -23,9 +23,9 @@ document.getElementById('submitBtn').addEventListener('click', function(){
         calculationForRow1(x1, y1, x1, y1)
         tableCalculations(x1, y1, x1, y1, slop, x2, y2)
     }
-    else {
+    else if(slop>1) {
         document.getElementById('slop').innerText = 'Slop is: ' + slop
-        document.getElementById('massage').innerText ='Sorry! slop can not be >1, Cause the highest value of tangent is 1.'
+        document.getElementById('massage').innerText ='[Sorry! slop can not be >1, Cause the highest value of tangent is 1.73205.]'
     }
 
 })
@@ -65,15 +65,15 @@ function tableCalculations(x, y, x_plot, y_plot, slop, x2, y2){
         }  
     }
 
-    else if(slop>1){
-        while(x_plot != x2 && y_plot != y2){
-            x = x + (1/m).toFixed(2)
-            y = y + 1
-            x_plot = Math.ceil(x)
-            y_plot = Math.ceil(y)
-            appendRow(x, y, x_plot, y_plot)
-        }  
-    }
+    // else if(slop>1){
+    //     while(x_plot != x2 && y_plot != y2){
+    //         x = x + (1/m).toFixed(2)
+    //         y = y + 1
+    //         x_plot = Math.ceil(x)
+    //         y_plot = Math.ceil(y)
+    //         appendRow(x, y, x_plot, y_plot)
+    //     }  
+    // }
 
     else if(slop<-1){
         while(x_plot != x2 && y_plot != y2){
