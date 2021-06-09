@@ -1,0 +1,54 @@
+#inputArea{
+    margin: 20px 20px 5px 300px;
+    padding: 5px;
+    background-color: antiquewhite;
+    border: 5px;
+    border-radius: 10px;
+    box-shadow: 5px 10px 10px gray;
+    height: 350px;
+    width: 350px;
+    display: block;
+    float:left
+}
+
+.mydiv{
+    margin-left: 20px;
+    color: blueviolet;
+}
+#submitBtn{
+    background-color: green;
+    border-radius: 5px;
+    padding: 5px;
+    color: wheat;
+}
+
+#slop{
+    color: tomato;
+    margin-left: 20px;
+}
+
+#makeTable{
+float:right;
+margin: 20px 250px 5px 20px;
+padding: 5px;
+background-color: antiquewhite;
+border: 5px;
+border-radius: 10px;
+box-shadow: 5px 10px 10px gray;
+height: 100%;
+width: 500px;
+display: block;
+}
+.head{
+   color:blueviolet;
+   margin: 5px 0 5px 20px;
+   padding: 5px;
+   text-align: center;
+}
+
+table, th, tr, td{
+border: 1.5px solid rgb(255, 3, 3);
+border-collapse: collapse;
+padding: 20px;
+margin-left: 70px;
+}
