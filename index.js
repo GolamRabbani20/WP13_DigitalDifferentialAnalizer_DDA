@@ -25,7 +25,7 @@ document.getElementById('submitBtn').addEventListener('click', function(){
     }
     else if(slop>1) {
         document.getElementById('slop').innerText = 'Slop is: ' + slop
-        document.getElementById('massage').innerText ='[Sorry! slop can not be >1, Cause the highest value of tangent is 1.73205.]'
+        document.getElementById('massage').innerText ='[Sorry! slop can not be >1.73205, Cause the highest value of tangent is 1.73205.]'
     }
 
 })
