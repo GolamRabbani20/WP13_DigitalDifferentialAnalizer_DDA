@@ -65,15 +65,15 @@ function tableCalculations(x, y, x_plot, y_plot, slop, x2, y2){
         }  
     }
 
-    // else if(slop>1){
-    //     while(x_plot != x2 && y_plot != y2){
-    //         x = x + (1/m).toFixed(2)
-    //         y = y + 1
-    //         x_plot = Math.ceil(x)
-    //         y_plot = Math.ceil(y)
-    //         appendRow(x, y, x_plot, y_plot)
-    //     }  
-    // }
+    else if(slop>1){
+        while(x_plot != x2 && y_plot != y2){
+            x = x + (1/m).toFixed(2)
+            y = y + 1
+            x_plot = Math.ceil(x)
+            y_plot = Math.ceil(y)
+            appendRow(x, y, x_plot, y_plot)
+        }  
+    }
 
     else if(slop<-1){
         while(x_plot != x2 && y_plot != y2){
