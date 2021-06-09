@@ -1,12 +1,19 @@
 document.getElementById('makeTable').style.display = 'none'
 
+document.getElementById('reset').addEventListener('click', function(){
+    const x1 = document.getElementById('x1').value = ""
+    const y1 = document.getElementById('y1').value = ""
+    const x2 = document.getElementById('x2').value = ""
+    const y2 = document.getElementById('y2').value = ""
+})
+
 document.getElementById('submitBtn').addEventListener('click', function(){
     const x1 = parseFloat(document.getElementById('x1').value)
     const y1 = parseFloat(document.getElementById('y1').value)
     const x2 = parseFloat(document.getElementById('x2').value)
     const y2 = parseFloat(document.getElementById('y2').value)
     const slop = ((y2 - y1) / (x2 - x1)).toFixed(2)
-    if(slop != 'NaN'){
+    if(slop != 'NaN' && slop <= 1){
         document.getElementById('slop').innerText = 'Slop is: ' + slop
         document.getElementById('makeTable').style.display = 'block'
 
@@ -15,6 +22,10 @@ document.getElementById('submitBtn').addEventListener('click', function(){
         createHeading()
         calculationForRow1(x1, y1, x1, y1)
         tableCalculations(x1, y1, x1, y1, slop, x2, y2)
+    }
+    else {
+        document.getElementById('slop').innerText = 'Slop is: ' + slop
+        document.getElementById('massage').innerText ='Sorry! slop can not be >1, Cause the highest value of tangent is 1.'
     }
 
 })

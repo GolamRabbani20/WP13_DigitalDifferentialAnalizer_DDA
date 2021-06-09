@@ -5,7 +5,7 @@
     border: 5px;
     border-radius: 10px;
     box-shadow: 5px 10px 10px gray;
-    height: 350px;
+    height: 100%;
     width: 350px;
     display: block;
     float:left
@@ -20,6 +20,7 @@
     border-radius: 5px;
     padding: 5px;
     color: wheat;
+    margin-left: 30px;
 }
 
 #slop{
@@ -51,4 +52,16 @@ border: 1.5px solid rgb(255, 3, 3);
 border-collapse: collapse;
 padding: 20px;
 margin-left: 70px;
+}
+
+#reset{
+    margin-left: 20px;
+    background-color: red;
+    border-radius: 5px;
+    padding: 5px;
+    color: wheat;
+}
+#massage{
+    color: tomato;
+    margin-left: 20px;
 }
