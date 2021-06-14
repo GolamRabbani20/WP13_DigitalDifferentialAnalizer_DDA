@@ -51,7 +51,7 @@ function tableCalculations(x, y, x_plot, y_plot, slop, x2, y2){
             y = y + m
             x_plot = Math.round(x)
             y_plot = Math.round(y)
-            appendRow(x, y, x_plot, y_plot)
+            appendRow(x, y, x_plot, y_plot, m)
         }  
     }
 
@@ -61,7 +61,7 @@ function tableCalculations(x, y, x_plot, y_plot, slop, x2, y2){
             y = y - m
             x_plot = Math.round(x)
             y_plot = Math.round(y)
-            appendRow(x, y, x_plot, y_plot)
+            appendRow(x, y, x_plot, y_plot, m)
         }  
     }
 
@@ -71,7 +71,7 @@ function tableCalculations(x, y, x_plot, y_plot, slop, x2, y2){
             y = y + 1
             x_plot = Math.round(x)
             y_plot = Math.round(y)
-            appendRow(x, y, x_plot, y_plot)
+            appendRow(x, y, x_plot, y_plot, m)
         }  
     }
 
@@ -81,19 +81,19 @@ function tableCalculations(x, y, x_plot, y_plot, slop, x2, y2){
             y = y - 1
             x_plot = Math.round(x)
             y_plot = Math.round(y)
-            appendRow(x, y, x_plot, y_plot)
+            appendRow(x, y, x_plot, y_plot, m)
         }  
     }
     
 }    
 
-function appendRow(x, y, x_plot, y_plot){
+function appendRow(x, y, x_plot, y_plot, m){
     const rowCol = document.getElementById('myTable')
     const trow = document.createElement('tr')
     trow.innerHTML =   
                         `
-                        <td>${x}</td>
-                        <td>${y.toFixed(2)}</td>
+                        <td> ${x-1} + 1 = ${x}</td>
+                        <td>${(y-m).toFixed(2)} + ${m} = ${y.toFixed(2)}</td>
                         <td>${x_plot}</td>
                         <td>${y_plot}</td>   
                         <td>(${x_plot}, ${y_plot})</td>

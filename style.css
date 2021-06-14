@@ -1,5 +1,5 @@
 #inputArea{
-    margin: 20px 20px 5px 300px;
+    margin: 20px 20px 5px 150px;
     padding: 5px;
     background-color: antiquewhite;
     border: 5px;
@@ -30,14 +30,14 @@
 
 #makeTable{
 float:right;
-margin: 20px 250px 5px 20px;
+margin: 20px 150px 5px 20px;
 padding: 5px;
 background-color: antiquewhite;
 border: 5px;
 border-radius: 10px;
 box-shadow: 5px 10px 10px gray;
 height: 100%;
-width: 500px;
+width: 700px;
 display: block;
 }
 .head{
