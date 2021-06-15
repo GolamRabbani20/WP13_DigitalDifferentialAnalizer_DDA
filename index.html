@@ -20,11 +20,23 @@
                 <b>Y2: </b><input id='y2' type="text"><br><br>
                 <button id='submitBtn'>Calculate</button><button id='reset'>Reset</button>
             </div>  
-                <h2 id='slop'></h2>
-                <p id='massage'></p> 
+            
+            <div id="selectAlgo">
+                <h3>Select a Algorithm</h3>
+                <input type="radio" id="ddaAlgo" name="Algorithm" value="ddaAlgorithm" checked>
+                <label for="ddaAlgo">DDA Algorithm</label>
+                
+                <br>
+                <input type="radio" id="bresehenham" name="Algorithm" value="bresehenhamAlgorithm">
+                <label for="bresehenham">Bresehenham Algorithm</label>
+
+                <h3 id='slop'></h3>
             </div>
+
+            
+        </div>
         <div id="makeTable">
-            <h3 class="head">Calculation Table</h3>
+            <h3 class="head">DDA Calculation Table</h3>
             <table id='myTable'>
             
             </table>

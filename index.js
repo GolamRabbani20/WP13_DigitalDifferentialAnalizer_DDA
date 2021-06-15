@@ -1,12 +1,13 @@
 document.getElementById('makeTable').style.display = 'none'
 
+//document.getElementById('ddaAlgo').addEventListener('click', function(){})
+
 document.getElementById('reset').addEventListener('click', function(){
     const x1 = document.getElementById('x1').value = ""
     const y1 = document.getElementById('y1').value = ""
     const x2 = document.getElementById('x2').value = ""
     const y2 = document.getElementById('y2').value = ""
     document.getElementById('slop').innerText = ""
-    document.getElementById('massage').innerText = ""
     document.getElementById('makeTable').style.display = 'none'
 })
 
@@ -16,7 +17,7 @@ document.getElementById('submitBtn').addEventListener('click', function(){
     const x2 = parseFloat(document.getElementById('x2').value)
     const y2 = parseFloat(document.getElementById('y2').value)
     const slop = ((y2 - y1) / (x2 - x1)).toFixed(2)
-    if(slop != 'NaN' && slop <= 1){
+    if(Math.round(slop)){
         document.getElementById('slop').innerText = 'Slop is: ' + slop
         document.getElementById('makeTable').style.display = 'block'
 
@@ -25,10 +26,6 @@ document.getElementById('submitBtn').addEventListener('click', function(){
         createHeading()
         calculationForRow1(x1, y1, x1, y1)
         tableCalculations(x1, y1, x1, y1, slop, x2, y2)
-    }
-    else if(slop>1) {
-        document.getElementById('slop').innerText = 'Slop is: ' + slop
-        document.getElementById('massage').innerText ='[Sorry! slop can not be >1.73205, Cause the highest value of tangent is 1.73205.]'
     }
 
 })
@@ -70,7 +67,7 @@ function tableCalculations(x, y, x_plot, y_plot, slop, x2, y2){
 
     else if(slop>1){
         while(x_plot != x2 && y_plot != y2){
-            x = x + (1/m).toFixed(2)
+            x = parseFloat((x + (1/m)).toFixed(2))
             y = y + 1
             x_plot = Math.round(x)
             y_plot = Math.round(y)
@@ -80,7 +77,7 @@ function tableCalculations(x, y, x_plot, y_plot, slop, x2, y2){
 
     else if(slop<-1){
         while(x_plot != x2 && y_plot != y2){
-            x = x - (1/m).toFixed(2)
+            x = parseFloat((x - (1/m)).toFixed(2))
             y = y - 1
             x_plot = Math.round(x)
             y_plot = Math.round(y)
@@ -93,7 +90,8 @@ function tableCalculations(x, y, x_plot, y_plot, slop, x2, y2){
 function appendRow(x, y, x_plot, y_plot, m){
     const rowCol = document.getElementById('myTable')
     const trow = document.createElement('tr')
-    trow.innerHTML =   
+    if(m>0 && m<=1){
+        trow.innerHTML =   
                         `
                         <td> ${x-1} + 1 = ${x}</td>
                         <td>${(y-m).toFixed(2)} + ${m} = ${y.toFixed(2)}</td>
@@ -101,7 +99,43 @@ function appendRow(x, y, x_plot, y_plot, m){
                         <td>${y_plot}</td>   
                         <td>(${x_plot}, ${y_plot})</td>
                         `
-    rowCol.appendChild(trow)
+        rowCol.appendChild(trow)
+    }
+
+    else if(m>= -1 && m<= 0){
+        trow.innerHTML =   
+                        `
+                        <td> ${x+1} - 1 = ${x}</td>
+                        <td>${(y+m).toFixed(2)} - (${m}) = ${y.toFixed(2)}</td>
+                        <td>${x_plot}</td>
+                        <td>${y_plot}</td>   
+                        <td>(${x_plot}, ${y_plot})</td>
+                        `
+        rowCol.appendChild(trow)
+    }
+    else if(m>1){
+        trow.innerHTML =   
+                        `
+                        <td> ${(x-(1/m)).toFixed(2)} + ${(1/m).toFixed(2)} = ${x}</td>
+                        <td>${y-1} + 1 = ${y}</td>
+                        <td>${x_plot}</td>
+                        <td>${y_plot}</td>   
+                        <td>(${x_plot}, ${y_plot})</td>
+                        `
+        rowCol.appendChild(trow)
+    }
+    else if(m<-1){
+        trow.innerHTML =   
+                        `
+                        <td> ${(x+(1/m)).toFixed(2)} - (${(1/m).toFixed(2)}) = ${x}</td>
+                        <td>${y+1} - 1 = ${y}</td>
+                        <td>${x_plot}</td>
+                        <td>${y_plot}</td>   
+                        <td>(${x_plot}, ${y_plot})</td>
+                        `
+        rowCol.appendChild(trow)
+    }
+  
 }  
 
 function createHeading() {

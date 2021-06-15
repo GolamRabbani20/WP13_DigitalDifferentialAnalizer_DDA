@@ -1,20 +1,35 @@
 #inputArea{
-    margin: 20px 20px 5px 150px;
-    padding: 5px;
+    margin: 20px 20px 5px 100px;
+    padding:5px;
     background-color: antiquewhite;
     border: 5px;
     border-radius: 10px;
     box-shadow: 5px 10px 10px gray;
     height: 100%;
-    width: 350px;
+    width: 500px;
     display: block;
-    float:left
+    float:left;
 }
 
 .mydiv{
     margin-left: 20px;
     color: blueviolet;
+    float: left;
+    padding: 0px 0px 10px 5px;
 }
+
+#selectAlgo{
+    float: right;
+    margin-right: 30px;
+    color: tomato;
+    background-color: turquoise;
+    height: 100%;
+    padding:10px ;
+    margin-top: 60px;
+    border-radius: 5px;
+    box-shadow: 3px 6px 8px gray;
+}
+
 #submitBtn{
     background-color: green;
     border-radius: 5px;
@@ -23,14 +38,9 @@
     margin-left: 30px;
 }
 
-#slop{
-    color: tomato;
-    margin-left: 20px;
-}
-
 #makeTable{
 float:right;
-margin: 20px 150px 5px 20px;
+margin: 20px 100px 5px 20px;
 padding: 5px;
 background-color: antiquewhite;
 border: 5px;
@@ -60,8 +70,4 @@ margin-left: 70px;
     border-radius: 5px;
     padding: 5px;
     color: wheat;
-}
-#massage{
-    color: red;
-    margin-left: 20px;
 }
