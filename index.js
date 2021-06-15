@@ -5,6 +5,9 @@ document.getElementById('reset').addEventListener('click', function(){
     const y1 = document.getElementById('y1').value = ""
     const x2 = document.getElementById('x2').value = ""
     const y2 = document.getElementById('y2').value = ""
+    document.getElementById('slop').innerText = ""
+    document.getElementById('massage').innerText = ""
+    document.getElementById('makeTable').style.display = 'none'
 })
 
 document.getElementById('submitBtn').addEventListener('click', function(){
