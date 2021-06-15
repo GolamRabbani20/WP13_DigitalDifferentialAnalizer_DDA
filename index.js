@@ -1,7 +1,5 @@
 document.getElementById('makeTable').style.display = 'none'
 
-//document.getElementById('ddaAlgo').addEventListener('click', function(){})
-
 document.getElementById('reset').addEventListener('click', function(){
     const x1 = document.getElementById('x1').value = ""
     const y1 = document.getElementById('y1').value = ""
@@ -21,14 +19,13 @@ document.getElementById('submitBtn').addEventListener('click', function(){
         document.getElementById('slop').innerText = 'Slop is: ' + slop
         document.getElementById('makeTable').style.display = 'block'
 
-
         document.getElementById('myTable').innerHTML = ""
         createHeading()
         calculationForRow1(x1, y1, x1, y1)
         tableCalculations(x1, y1, x1, y1, slop, x2, y2)
-    }
-
+    } 
 })
+
 function calculationForRow1(x, y, x_plot, y_plot) {
     const rowCol = document.getElementById('myTable')
     const trow = document.createElement('tr')

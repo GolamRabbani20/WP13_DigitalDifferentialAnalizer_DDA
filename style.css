@@ -22,12 +22,12 @@
     float: right;
     margin-right: 30px;
     color: tomato;
-    background-color: turquoise;
+    background-color: antiquewhite;
     height: 100%;
     padding:10px ;
     margin-top: 60px;
     border-radius: 5px;
-    box-shadow: 3px 6px 8px gray;
+    box-shadow: 5px 6px 9px gray;
 }
 
 #submitBtn{
