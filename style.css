@@ -43,22 +43,22 @@ float:right;
 margin: 20px 100px 5px 20px;
 padding: 5px;
 background-color: antiquewhite;
-border: 5px;
 border-radius: 10px;
 box-shadow: 5px 10px 10px gray;
 height: 100%;
 width: 700px;
 display: block;
+padding-bottom: 40px;
 }
 .head{
    color:blueviolet;
    margin: 5px 0 5px 20px;
-   padding: 5px;
+   padding: 10px;
    text-align: center;
 }
 
 table, th, tr, td{
-border: 1.5px solid rgb(255, 3, 3);
+border: 1.7px solid blue;
 border-collapse: collapse;
 padding: 20px;
 margin-left: 70px;

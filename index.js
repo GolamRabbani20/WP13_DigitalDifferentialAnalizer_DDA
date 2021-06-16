@@ -15,7 +15,7 @@ document.getElementById('submitBtn').addEventListener('click', function(){
     const x2 = parseFloat(document.getElementById('x2').value)
     const y2 = parseFloat(document.getElementById('y2').value)
     const slop = ((y2 - y1) / (x2 - x1)).toFixed(2)
-    if(Math.round(slop)){
+    if((slop>0 || slop<=0) && slop!="NaN"){
         document.getElementById('slop').innerText = 'Slop is: ' + slop
         document.getElementById('makeTable').style.display = 'block'
 
